@@ -92,10 +92,12 @@
         <ul class="ul-edu fa-ul">
           {{ range .courses }}
           <li>
-            <i class="fa-li fas fa-graduation-cap"></i>
+            <a href="{{ .link }}" target="_blank">
+              <i><img src="img/logos/{{ .logo }}" style="position: absolute;left: -2.5rem;width: 2rem;top: 0.14285714em;text-align: center;"></i>
+            </a>
             <div class="description">
               <p class="course">{{ .course }}{{ with .year }}, {{ . }}{{ end }}</p>
-              <p class="institution">{{ .institution }}</p>
+              <a href="{{ .link }}"><p class="institution">{{ .institution }}</p></a>
             </div>
           </li>
           {{ end }}
